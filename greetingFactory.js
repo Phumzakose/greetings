@@ -1,6 +1,6 @@
 function GreetingsFactory(people) {
   var namesList = people || [];
-  var counter = 0;
+  var checkAlphabets = /^[a-zA-Z]+$/;
 
   function storeName(userName) {
     if (!namesList.includes(userName)) {
@@ -14,7 +14,6 @@ function GreetingsFactory(people) {
   function greetingMessage(userName, language) {
     let check = storeName(userName);
     if (check) {
-      console.log("inside");
       if (language === "English") {
         return "Hello," + " " + userName;
       } else if (language === "IsiXhosa") {
@@ -29,12 +28,14 @@ function GreetingsFactory(people) {
 
   function errorMessages(userName, language) {
     if (userName === "" && !language) {
-      return "Please select language and enter your name";
+      return "Please select a language and enter your name";
     }
     if (userName === "") {
       return "Please enter your name";
     } else if (!language) {
       return "Please select your language";
+    } else if (userName !== checkAlphabets) {
+      return "Please enter a valid name";
     }
   }
   function resetButton() {
