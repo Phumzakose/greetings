@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>greetings</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>GREETING</h1>
+      </div>
+      <section class="input-field">
+        <div class="input">
+          <form>
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              minlength="3"
+              maxlength="20"
+              required
+            />
+          </form>
+        </div>
+      </section>
+      <section class="radio-buttons-languages">
+        <div class="radio-buttons">
+          <input
+            type="radio"
+            id="english"
+            name="greet-language"
+            value="English"
+          />
+          <label for="english">English</label><br />
+          <input
+            type="radio"
+            id="isiXhosa"
+            name="greet-language"
+            value="IsiXhosa"
+          />
+          <label for="isixhosa">IsiXhosa</label><br />
+          <input
+            type="radio"
+            id="afrikaans"
+            name="greet-language"
+            value="Afrikaans"
+          />
+          <label for="afrikaans">Afrikaans</label>
+        </div>
+      </section>
+      <section class="greet">
+        <div class="greet-bttn">
+          <button class="bttn1" type="button">Greet me</button>
+          <button class="bttn2" type="button">reset</button>
+        </div>
+      </section>
+      <section class="counting">
+        <div class="counter">
+          <p><span class="display" value="0"></span></p>
+        </div>
+      </section>
+      <section class="text-message">
+        <p id="text">Your greet message</p>
+      </section>
+    </div>
+    <script src="greetingFactory.js" charset="UTF-8"></script>
+    <script src="greet.js" charset="UTF-8"></script>
+  </body>
+</html>
