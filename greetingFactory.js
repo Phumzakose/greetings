@@ -22,7 +22,7 @@ function GreetingsFactory(people) {
         return "Hallo," + " " + userName;
       }
     } else {
-      return "you have been greeted";
+      return userName + " you have been greeted";
     }
   }
 
