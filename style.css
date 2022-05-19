@@ -5,7 +5,7 @@
 
 }
 html{
-background-color: darkgrey;
+background-color: #1089ad;
 }
 
 .container{
@@ -14,19 +14,19 @@ background-color: darkgrey;
   margin-right: auto;
   width: 40%;
 }
-.warning{
-  background-color: peachpuff;
+.dangers{
+  color: red;
 }
 #text {
   text-align:center;
-  background-color: #1089ad;
+  background-color: darkgray;
   font-size: 32px;
   font-style: italic;
  
 }
 .heading {
   font-style: italic;
-  background-color:#1089ad ;
+  background-color:darkgray ;
   text-align: center;
   font-size: 24px;
   margin-bottom: 60px;

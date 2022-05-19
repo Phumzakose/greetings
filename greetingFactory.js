@@ -1,6 +1,11 @@
 function GreetingsFactory(people) {
   var namesList = people || [];
   var checkAlphabets = /^[a-zA-Z]+$/;
+  var theUsername = 0;
+
+  function setUsername(userName) {
+    theUsername = userName;
+  }
 
   function storeName(userName) {
     if (!namesList.includes(userName)) {
@@ -38,17 +43,17 @@ function GreetingsFactory(people) {
       return "Please enter a valid name";
     }
   }
-  function resetButton() {
-    return people.length;
+  function storedNames() {
+    return namesList;
   }
-  function clearName() {
-    preventDefault();
-    greetElement.value = "";
-  }
+
+  function color() {}
   return {
     storeName,
     greetingMessage,
     errorMessages,
-    resetButton,
+    color,
+    storedNames,
+    setUsername,
   };
 }
