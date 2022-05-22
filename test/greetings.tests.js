@@ -20,7 +20,7 @@ describe("The greet Function", function () {
     });
 
     describe("returning username greeted once", function () {
-      it("should return usernames greeted once", function () {
+      it("should check if username was greeted fo ", function () {
         let greet = GreetingsFactory();
         greet.storeName("Phumza");
         greet.storeName("Lakhe");
@@ -28,7 +28,7 @@ describe("The greet Function", function () {
         greet.storeName("Lakhe");
         assert.deepEqual(["Phumza", "Lakhe"], greet.storedNames());
       });
-      it("should return all username greeted", function () {
+      it("should return all username greeted once", function () {
         let greet = GreetingsFactory();
         greet.storeName("Phumza");
         greet.storeName("Pearl");
