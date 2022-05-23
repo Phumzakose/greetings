@@ -46,13 +46,14 @@ function GreetingsFactory(people) {
   function storedNames() {
     return namesList;
   }
-
-  function color() {}
+  function count() {
+    return namesList.length;
+  }
   return {
     storeName,
     greetingMessage,
     errorMessages,
-    color,
+    count,
     storedNames,
     setUsername,
   };

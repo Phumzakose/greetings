@@ -40,6 +40,22 @@ describe("The greet Function", function () {
           greet.storedNames()
         );
       });
+      describe("returning the number of people greeted", function () {
+        it("should return the number of people greeted", function () {
+          let greet = GreetingsFactory();
+          greet.greetingMessage("Phumza");
+          greet.greetingMessage("Phumza");
+          greet.greetingMessage("Phumza");
+          assert.equal(1, greet.count());
+        });
+        it("should return the number of people greeted", function () {
+          let greet = GreetingsFactory();
+          greet.greetingMessage("Phumza");
+          greet.greetingMessage("Thembi");
+          greet.greetingMessage("Zuko");
+          assert.equal(3, greet.count());
+        });
+      });
 
       describe("should return error messages", function () {
         it("it should return error messages if there is no language selected and name entered", function () {
