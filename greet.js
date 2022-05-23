@@ -22,8 +22,10 @@ greetButton.addEventListener("click", function () {
   message.style.color = "red";
   if (checkedRadioBtn && checkAlphabets.test(greetElement.value)) {
     var language = checkedRadioBtn.value;
-    var userName = greetElement.value.toLowerCase();
-    message.innerHTML = greetingsInstance.greetingMessage(userName, language);
+    var userName = greetElement.value;
+    let name =
+      userName.charAt(0).toUpperCase() + userName.slice(1).toLowerCase();
+    message.innerHTML = greetingsInstance.greetingMessage(name, language);
     message.style.color = "black";
     localStorage.setItem(
       "myPeople",

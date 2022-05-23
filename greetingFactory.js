@@ -4,7 +4,8 @@ function GreetingsFactory(people) {
   var theUsername = 0;
 
   function setUsername(userName) {
-    theUsername = userName;
+    theUsername =
+      userName.charAt(0).toUpperCase() + userName.slice(1).toLowerCase();
   }
 
   function storeName(userName) {
